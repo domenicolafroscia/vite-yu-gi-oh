@@ -1,1 +1,7 @@
+@use "../style/partials/variables" as *;
+
 @import "bootstrap/scss/bootstrap.scss";
+
+img {
+    max-width: 100%;
+}

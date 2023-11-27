@@ -1,18 +1,28 @@
 <script>
 import axios from "axios";
+import AppHeader from "./components/AppHeader.vue";
+import { store } from "./store.js";
+import CharactersList from "./components/CharactersList.vue";
 
 export default {
+  data() {
+    return {
+      store,
+    };
+  },
   created() {
     axios
-    .get("https://db.ygoprodeck.com/api/v7/cardinfo.php?num=20&offset=0").then((resp) => {
-      console.log(resp);
-    });
+      .get("https://db.ygoprodeck.com/api/v7/cardinfo.php?num=20&offset=0").then((resp) => {
+        this.store.cards = resp.data.data;
+      });
   },
+  components: { AppHeader, CharactersList },
 };
 </script>
 
 <template>
-  <h1>hello</h1>
+  <AppHeader />
+  <CharactersList />
 </template>
 
 <style lang="scss">
