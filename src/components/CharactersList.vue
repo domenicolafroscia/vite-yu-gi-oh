@@ -16,13 +16,6 @@ export default {
 
 <template>
     <div class="ms_container">
-        <select class="form-select w-25 ms-3" aria-label="Default select example">
-            <option selected>Open this select menu</option>
-            <option value="1">One</option>
-            <option value="2">Two</option>
-            <option value="3">Three</option>
-        </select>
-
         <div class="ms_container-1">
             <h5 class="fw-bolder text-bg-dark p-2">Found 20 cards</h5>
             <div class="row row-cols-5">
@@ -39,13 +32,12 @@ export default {
 
  .ms_container {
     background-color: $orange;
-    padding: 5rem;
+    padding: 4rem;
     .ms_container-1 {
         background-color: white;
         padding: 3rem;
         margin-top: 2rem;
     }
 }
-
 
 </style>
