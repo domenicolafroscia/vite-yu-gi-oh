@@ -8,10 +8,10 @@ export default {
 </script>
 
 <template>
-    <div class="card mb-4">
+    <div class="card h-100">
         <img :src="card.card_images[0].image_url" alt="">
         <h4 class="text-center text-white my-3">{{ card.name }}</h4>
-        <p class="text-center">{{ card.archetype }}</p>
+        <p class="text-center">{{ card.archetype ? card.archetype : "Nessun archetipo" }}</p>
     </div>
 </template>
 
@@ -20,6 +20,5 @@ export default {
 
 .card {
     background-color: $orange;
-  
 }
 </style>

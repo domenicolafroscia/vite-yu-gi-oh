@@ -26,7 +26,7 @@ export default {
         <div class="ms_container-1">
             <h5 class="fw-bolder text-bg-dark p-2">Found 20 cards</h5>
             <div class="row row-cols-5">
-                <div class="col" v-for="card in store.cards">
+                <div class="col mb-4" v-for="card in store.cards" key="card.id">
                     <AppCard :card="card" />
                 </div>
             </div>
